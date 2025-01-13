@@ -15,3 +15,7 @@ export const registerSchema = z
 		message: 'Passwords do not match, check passwords',
 		path: ['confirmPassword'], // bu path yurqoirdagi hatolik paydo bo'lganda path ning ichidagi qismda message ni ko'rsatadi, ya'ni hatolik qaysi elementga tegishli ekanini belgilaydi
 	})
+
+export const taskSchema = z.object({
+	title: z.string().min(5),
+})
